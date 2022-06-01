@@ -39,7 +39,7 @@ const Form = ({
           gap: "$4",
         }}
       >
-        <Box>
+        <Box className="field_container">
           <label htmlFor="type">Type</label>
 
           <Input
@@ -64,7 +64,7 @@ const Form = ({
         </Box>
 
 
-        <Box>
+        <Box className="field_container">
           <label htmlFor="sales">Label</label>
           <Input
             css={{
@@ -90,7 +90,7 @@ const Form = ({
 
         {fields.type === "select" ? (<>
 
-          <Box>
+          <Box className="field_container">
             <label htmlFor="default_value">Default Value</label>
             <Input
               as="select"
@@ -111,11 +111,11 @@ const Form = ({
             </Input>
           </Box>
 
-          <Box css={{ position: "relative" }}>
+          <Box css={{ position: "relative" }} className="field_container">
             <label htmlFor="add_choice">Add Choice</label>
 
             <Input
-              css={{ mx: "$4", width: "400px" }}
+              css={{ mx: "$4", width: "400px", '@bp2': { width: 'auto' } }}
               type="text"
               value={fields.choice}
               placeholder={fields.choices[0]}
@@ -145,6 +145,7 @@ const Form = ({
               }}
             />
             <Box
+
               as="span"
               css={{
                 color: "transparent",
@@ -161,12 +162,14 @@ const Form = ({
 
           <Box>
             <Box
+
               css={{
                 height: "200px",
                 bg: "$blue2",
                 width: "300px",
                 pt: "$1",
                 overflowY: "scroll",
+                '@bp2': { width: 'auto' }
               }}
             >
               {fields.choices.length <= 50 &&
@@ -216,7 +219,7 @@ const Form = ({
                   ))}
             </Box>
           </Box>
-          <Box>
+          <Box className="field_container">
             <label htmlFor="display">Order</label>
             <Input
               as="select"
@@ -232,7 +235,7 @@ const Form = ({
           </Box>
         </>
         ) : (<>
-          <Box>
+          <Box className="field_container">
             <label htmlFor="default_value">placeholder</label>
             <Input
 

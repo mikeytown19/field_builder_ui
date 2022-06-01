@@ -37,7 +37,7 @@ export default function Home() {
   }, [fields]);
 
   return (
-    <Box css={{ padding: "$10" }}>
+    <Box css={{ padding: "$10", "@bp2": { p: "$3 $2" } }}>
       <Box css={{ border: "$blue5 solid 1px", br: "$2" }}>
         <Box css={{ p: "$3", bg: "$blue3" }}>Field Builder</Box>
         <Form
