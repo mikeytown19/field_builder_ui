@@ -11,7 +11,7 @@ import {
   gold,
 } from "@radix-ui/colors";
 
-export const { styled, css, globalCss } = createStitches({
+export const { styled, css, globalCss, getCssText } = createStitches({
   theme: {
     colors: {
       ...whiteA,
